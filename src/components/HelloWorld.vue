@@ -17,7 +17,6 @@ export default {
   name: 'HelloWorld',
   props: {
     title: String,
-    // message: String,
   },
   data: function(){
     return {
@@ -28,6 +27,7 @@ export default {
   methods: {
     doAction: function(){
       this.message = 'hi ' + this.input + 'san!';
+      this.$emit('result-event',this.input);
     }
   }
 }
